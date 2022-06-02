@@ -62,8 +62,16 @@ D7 = X Y Z
 ### PROGRAM 
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: M.PAVAN KISHORE
+RegisterNumber:  212221230076
+
+module enc(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input d0,d1,d2,d3,d4,d5,d6,d7;
+output a,b,c;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
 */
 
 
@@ -73,6 +81,7 @@ RegisterNumber:
 
 ### RTL LOGIC  
 
+![171544996-5cfa93e7-86fc-42d8-9e5d-687b3146ff65](https://user-images.githubusercontent.com/94154941/171629283-1217b90b-6f37-44e5-9869-56462ea3afc4.png)
 
 
 
@@ -82,15 +91,47 @@ RegisterNumber:
 
 ### TIMING DIGRAMS  
 
+![171545012-01846b5b-2c52-4f99-9347-f1a583c71d13](https://user-images.githubusercontent.com/94154941/171629291-06a1e109-b511-4aba-91c7-dc4819a4bc43.jpeg)
 
 
 
 
 ### TRUTH TABLE 
 
+![171545485-081f0497-5689-49ba-9e62-f1e1ead2c234](https://user-images.githubusercontent.com/94154941/171629299-c95d5d71-54b0-4e76-aa0a-dc1bef8399c6.png)
 
 
+## PROGRAM(DECODER):
+/*
+Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
+Developed by: M.PAVAN KISHORE
+RegisterNumber:  212221230076
 
 
+module enc(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+endmodule
+*/
+## RTL LOGIC:
+![171545203-cc7c2118-d4ae-4364-a095-9c418ef0a5d7](https://user-images.githubusercontent.com/94154941/171629735-9d083518-95df-4b9b-9c64-ad6fd1bda5f5.png)
 
-### RESULTS 
+
+## TIMING DIAGRAM:
+![171545245-b8c00f4e-8474-4533-8fad-755bb2704671](https://user-images.githubusercontent.com/94154941/171629738-90d7ebdc-569c-4b82-8579-d2aa7a16e103.png)
+
+
+## TRUTH TABLE:
+![171546126-a5486670-9948-4b5d-aba6-dcad149b283b](https://user-images.githubusercontent.com/94154941/171629745-ceb58cd7-708b-4661-8b72-153d6d6102dd.png)
+
+
+## RESULTS
+Thus the program to desing encoder and decoder is done.
